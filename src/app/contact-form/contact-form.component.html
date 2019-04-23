@@ -1,0 +1,24 @@
+<div class="container">
+	
+			<h1 class="">Contact From</h1>
+		<form id="contact-form">
+			<label>Name:
+		<input type="text"  id="name" name="name" [(ngModel)]="inputObj.name" required >
+			</label>
+			<label>Email:
+		<input type="email"  id="email" name="email"  [(ngModel)]="inputObj.email" required>
+		</label>
+		<label>Mobile:
+		<input type="phone" id="mobile" name="mobile"  [(ngModel)]="inputObj.mobile" required>
+		</label>
+		<label>Address:
+		<input type="text" id="address" name="class" [(ngModel)]="inputObj.address" required>
+		</label>
+		<button class="input-group-text"  type="submit" id="submit" name="submit" (click)="add()">add</button>
+		</form>
+
+		<li id="display-list" *ngFor="let todo of todoArray">{{todo.name}} | {{todo.email}} | {{todo.mobile}} | {{todo.address}}
+			<button class="material-icons"(click)="delete(todo)">Delete</button>
+			<button (click)="edit(todo)">Edit</button> 
+		</li>
+</div>

@@ -11,5 +11,13 @@ export class ToDoListComponent implements OnInit {
 
   ngOnInit() {
   }
+  name='';
+  array=[];
+
+  add(){
+    this.array.push(this.name)
+    console.log(this.name);
+    console.log(this.array);
+  }
 
 }

@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ToDoViewComponent } from './to-do-view/to-do-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoListComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ToDoViewComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ToDoViewComponent } from './to-do-view/to-do-view.component';
 
+import { TodoService } from './services/todo.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { ToDoViewComponent } from './to-do-view/to-do-view.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

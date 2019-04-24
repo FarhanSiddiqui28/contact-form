@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../services/todo.service'
 
 @Component({
   selector: 'app-to-do-view',
@@ -6,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-do-view.component.css']
 })
 export class ToDoViewComponent implements OnInit {
-
-  constructor() { }
+  arr = []
+  constructor(private todoservice: TodoService) { }
   ngOnInit() {
+    this.arr = this.todoservice.getData()
+    console.log(this.arr)
   }
-  
-  arr=['frrf','trrt'];
 
 }

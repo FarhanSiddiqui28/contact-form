@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../services/todo.service'
 
 @Component({
   selector: 'app-to-do-list',
@@ -6,18 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-do-list.component.css']
 })
 export class ToDoListComponent implements OnInit {
-
-  constructor() { }
+  name = ''
+  constructor(private todoservice: TodoService) { }
 
   ngOnInit() {
-  }
-  name='';
-  array=[];
+    console.log('Todo list component')
 
-  add(){
-    this.array.push(this.name)
-    console.log(this.name);
-    console.log(this.array);
+  }
+
+  add() {
+    this.todoservice.setDate(this.name)
   }
 
 }
